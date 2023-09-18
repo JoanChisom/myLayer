@@ -28,11 +28,11 @@ function Features(){
                     <Body>
                         <Left>
                         <Wrapp mg="45px">
-                <Icon cl="#e74c3c "><SlNote/></Icon>
-                <Wrap>
-                    <h2>Creative Design</h2>
-                    <p>Lorem ipsum dolor sit amet elit.</p>
-                </Wrap>
+                             <Icon cl="#e74c3c "><SlNote/></Icon>
+                            <Wrap>
+                               <h2>Creative Design</h2>
+                                <p>Lorem ipsum dolor sit amet elit. </p>
+                                 </Wrap>
             </Wrapp>
             <Wrapp>
                 <Icon cl="blue"><TfiFlagAlt/></Icon>
@@ -68,7 +68,7 @@ Easy To Customize</h2>
                 <Icon cl="blue"><BsGlobe2/></Icon>
                 <Wrap>
                     <h2>
-Easy To Customize</h2>
+                        Easy To Customize</h2>
                     <p>Lorem ipsum dolor sit amet elit.</p>
                 </Wrap>
             </Wrapp>
@@ -97,17 +97,31 @@ height:100%;
 flex-direction:column;
 // background-color:yellow;
 margin-top:32px;
-justify-content:space-between;`
+justify-content:space-between;
+@media screen and (max-width: 768px){
+    width:90%;
+    display:flex;
+    justify-content:flex-start;
+    
+}`
 
 const Img = styled.img`
-width:80%;
+width:85%;
 // height:100%;
 object-fit:cover;
 object-position:center;
+@media screen and (max-width:768px){
+    width:50%;
+}
 `
 
 const Center = styled.div`
-width:30%;`
+width:30%;
+@media screen and (max-width:768px){
+    width: 100%;
+    display:flex;
+    justify-content:center;
+}`
 
 const Wrap = styled.div`
 display:flex;
@@ -129,7 +143,10 @@ p{
 const Icon = styled.div<{cl:string}>`
 font-size:37px;
 
-color:${({cl})=>cl}
+color:${({cl})=>cl} ;
+@media screen and (max-width:768px){
+    font-size:40px;
+}
 `
 
 const Wrapp = styled.div<{mg?:string}>`
@@ -137,11 +154,18 @@ display:flex;
 justify-content:center;
 align-items:center;
 width:76%;
-margin-bottom:39px; 
-border-radius:7px;
+margin-bottom:49px; 
+border-radius:10px;
 box-shadow: 2px 1px 8px 3px silver;
 margin-left:${({mg})=>mg};
 padding:15px 15px;
+background-color:transparent;
+@media screen and (max-width:768px){
+    width:100%;
+    margin-left:0px;
+    display:flex;
+    justify-content:flex-start;
+}
 `
 
 const Right = styled.div`
@@ -152,7 +176,13 @@ margin-top:32px;
 
 flex-direction:column;
 // background-color:blue;
-justify-content:space-between;`
+justify-content:space-between;
+@media screen and (max-width:768px){
+    width: 90%;
+    display:flex;
+    justify-content:flex-start;
+}
+`
 
 
 const Body = styled.div`
@@ -160,6 +190,12 @@ width:100%;
 // background-color:green;
 display:flex;
 margin-top:22px;
+@media screen and (max-width:768px){
+    flex-direction:column;
+    flex-wrap:wrap;
+   
+
+}
 `
 
 const Rope= styled.div`
@@ -195,7 +231,7 @@ height:10%;
 h1{
     text-transform:uppercase;
     font-size:36px;
-
+    margin-bottom:5px;
     span{
         color:#e74c3c
     };
@@ -205,14 +241,19 @@ p{
     line-height:31px;
     color:rgba(0,0,0,0.7);
     text-align:center;
-   
-
+    margin-top:8px;
+    
 };
 margin-bottom:10px;
+@media screen and (max-width:768px){
+    font-size:14px;
+    text-align:center;
+    width:63%;
+}
 `
 
 const Wrapper = styled.div`
-width:90%;
+width:85%;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -229,4 +270,9 @@ background-size:cover;
 background-position:center;
 justify-content:center;
 align-items:center;
-padding-top:60px`
+padding-top:60px;
+@media screen and (max-width:768px){
+    background-image:url(${bg});
+    background-position:center;
+    background-size:fit;
+}`

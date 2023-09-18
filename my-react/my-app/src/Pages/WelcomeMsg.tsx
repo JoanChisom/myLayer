@@ -3,6 +3,7 @@ import Imag from "../assets/images/about-4.png"
 import {TfiDesktop} from "react-icons/tfi"
 import { TfiAnnouncement } from "react-icons/tfi";
 import { TfiSettings } from "react-icons/tfi";
+import GlobalCLCircles from "../Props/GlobalColorCircles"
 
 const Component1 = ()=>{
     return(
@@ -23,7 +24,7 @@ const Component1 = ()=>{
                     <Body>
                         <Left>
                             <Hold>
-                                <Circle><TfiDesktop/></Circle>
+                                <GlobalCLCircles lg="#c513da, #9828e8"icon={TfiDesktop}/>
                                 <Holder>
                                     <h3>BOOTSTRAP 3.2</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -31,7 +32,8 @@ const Component1 = ()=>{
                                 </Holder>
                             </Hold>
                             <Hold>
-                                <Circle1><TfiSettings/></Circle1>
+                            <GlobalCLCircles lg="#ff9633, #ff5e3c"icon={TfiSettings}/>
+                                
                                 <Holder>
                                     <h3>CREATIVE DESIGN</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -39,7 +41,8 @@ const Component1 = ()=>{
                                 </Holder>
                             </Hold>
                             <Hold>
-                                <Circle2><TfiAnnouncement/></Circle2>
+                            <GlobalCLCircles lg="#fb6252, #f0356c"icon={TfiAnnouncement}/>
+                                
                                 <Holder>
                                     <h3>EASY TO USE</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
@@ -73,46 +76,9 @@ p{
     margin-bottom:9px;
     text-align:end;
     font-size:16px;
-}`
-
-const Circle2 = styled.div`
-width:84px;
-height:84px;
-border-radius:50%;
-background-image:linear-gradient(190deg, #fb6252, #f0356c);
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:33px;
-`
-
-const Circle1 = styled.div`
-width:84px;
-height:84px;
-border-radius:50%;
-background-image:linear-gradient(190deg, #ff9633, #ff5e3c);
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:33px;
-`
-
-const Circle = styled.div`
-width:84px;
-height:84px;
-border-radius:50%;
-background-image:linear-gradient(190deg, #c513da, #9828e8);
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:33px;
-
-&:hover{
-    transition: all 350ms
+    
 }
+
 `
 
 const Hold = styled.div`
@@ -122,20 +88,35 @@ margin-top:27px;
 align-items:center;
 margin-bottom:20px;
 // background-color:yellow;
+
 `
 
 const Left = styled.div`
-width:50%;
+width:54%;
 // background-color:blue
+@media screen and (max-width: 768px){
+    width:100%;
+
+}
 `
 
 const Img = styled.img`
 width:100%;
 height:100%;
-object-fit:cover`
+object-fit:cover;
+@media screen and (max-width:768px){
+    width:80%
+}`
 
 const Right = styled.div`
-width:45%;
+width:43%;
+display:flex;
+justify-content:center;
+@media screen and (max-width: 768px){ 
+    width:90%;
+    margin-top:26px;
+
+}
 
 `
 
@@ -144,6 +125,7 @@ padding-top:20px;
 display:flex;
 justify-content:space-between;
 width:90%;
+flex-wrap:wrap;
 // background-color:red;
 `
 
@@ -180,7 +162,7 @@ height:10%;
 h1{
     text-transform:uppercase;
     font-size:36px;
-
+    margin-bottom:5px;
     span{
         color:#e74c3c
     };
@@ -188,20 +170,28 @@ h1{
 
 p{
     line-height:31px;
+    margin-top:8px;
     color:rgba(0,0,0,0.7);
     text-align:center;
    
 
 };
 margin-bottom:10px;
+@media screen and (max-width:768px){
+    width:55%;
+    display:flex;
+ };
+ 
+ @media screen and (max-width:425px){
+  width:90%;  
+ }
 `
 
 const Wrapper = styled.div`
-width:95%;
+width:85%;
 display:flex;
 flex-direction:column;
 align-items:center;
-
 justify-content:flex-end;`
 
 
@@ -211,4 +201,5 @@ height:100%;
 display:flex;
 justify-content:center;
 align-items:center;
-padding-top:60px`
+padding-top:60px;
+`

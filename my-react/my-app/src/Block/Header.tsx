@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div>
         {header ? (
-        <Container bg="white" po="fixed" cl="black" bd="0.5px solid grey" bx="0px 0px, darkgrey 7px 3px">
+        <Container bg="white" po="fixed" cl="black" bd="none" bx="0px 0px 30px #ebebebff">
       <Wrapper>
         <Menu><BiMenu /></Menu>
         <Logo1 src={blackLogo} />
@@ -41,7 +41,7 @@ const Header = () => {
     </Container>
         
     ) : (
-        <Container bg="transparent" po="fixed" cl="white" bd="none">
+        <Container bg="transparent" po="fixed" cl="white" bd="none" bx="none">
       <Wrapper>
         <Menu><BiMenu /></Menu>
         <Logo src='https://zozothemes.com/html/layer/demo/images/logo-color.png' />
@@ -64,18 +64,19 @@ const Header = () => {
   )
 }
 
+
 export default Header;
 
 const Search = styled.div`
   font-size: 30px;
   color: red;
   display:none;
-  @media screen and (max-width 768px){
+  @media screen and (max-width: 768px){
     display:flex;
   };
   @media screen and (max-width: 425px){
     display:flex;
-    color:black;
+    color:#e74c3c;
   }
 `
 const Menu = styled.div`
@@ -85,10 +86,11 @@ const Menu = styled.div`
   display:none;
   @media screen and (max-width: 768px){
     display:flex;
+    color:#e74c3c;
   }
   @media screen and (max-width: 425px){
     display:flex;
-    color:black;
+    color:#e74c3c;
   }
 `
 const Icon = styled.div`
@@ -106,6 +108,7 @@ const Icon = styled.div`
 `
 const Navs = styled.h4<{cl:string}>`
   text-transform: uppercase;
+  cursor:pointer;
   color:${({cl})=>cl};
   margin-left: 30px;
   &:hover{
@@ -126,8 +129,11 @@ const Navhold = styled.div`
 `
 const Logo1 = styled.img`
   height: 35px;
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
   @media screen and (max-width: 425px) {
-    display: none;
+    display: flex;
   }
 `
 
@@ -137,7 +143,7 @@ const Logo = styled.img`
 `
 const Wrapper = styled.div`
   display: flex;
-  width: 90%;
+  width: 85%;
   height: 100%;
   align-items: center;
   justify-content: space-between;
@@ -152,9 +158,10 @@ const Container = styled.div<{bg:string, po:string, cl:string, bd:string, bx?:st
   position: ${({po})=>po};
   border-bottom:${({bd})=>bd};
   box-shadow: ${({bx})=>bx} ;
+  z-index:1;
   @media screen and (max-width: 425px){
     background-color:white;
     color:black;
     position:fixed;
-  }
+  };
 `

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import img from "../assets/images/bg-1.jpg"
+import GlobalButton from "../Props/GlobalButton"
 
 const Hero = () => {
   return (
@@ -12,8 +13,10 @@ const Hero = () => {
           <p>We ensure quality & support. People love us & we love them. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
           <Holder>
-            <Button bg='#e74c3c' wd='140px' bd='none' ml=''>Learn more</Button>
-          <Button bg='transparent' wd='180px' bd='1px solid #fff' ml='14px'>Download Now</Button>
+            <GlobalButton bg="#e74c3c" wd="140px" bd="none" ml="" text="Learn more"/>
+            <GlobalButton bg="transparent" wd="180px" bd="1px solid #fff" ml="14px" text="Download Now"/>
+            
+          
           </Holder>
         </Left>
         <Right>
@@ -38,23 +41,7 @@ const Holder = styled.div`
   display: flex;
   margin-top: 35px;
 `
-const Button = styled.button<{bg: string, wd: string, bd: string, ml: string}>`
-  width: ${({ wd }) => wd};
-  background-color: ${({ bg }) => bg};
-  border: ${({ bd }) => bd};
-  margin-left: ${({ ml }) => ml};
-  height: 50px;
-  border-radius: 100px;
-  cursor: pointer;
-  color: #fff;
-  font-weight:bold;
- 
-  &:hover{
-    
-    background-color:white;
-    color:black
-  }
-`
+
 const Img = styled.img`
   height: 95%;
   @media screen and (max-width: 768px) {
@@ -75,7 +62,7 @@ const Right = styled.div`
       justify-content: center;
       display: flex;
       /* background-color: red; */
-  }
+  };
 `
 const Left = styled.div`
   width: 40%;
@@ -89,15 +76,16 @@ const Left = styled.div`
     margin-bottom: 25px;
     @media screen and (max-width: 768px) {
       font-size: 30px;
-    }
+    };
     @media screen and (max-width: 425px){
         width:100%;
-        font-size:36px;
-    }
+        font-size:56px;
+        background-color:pink;
+    };
     span{
       color:#e74c3c ;
-    }
-  }
+    };
+  };
   p{
     color: #fff;
     margin: 0;

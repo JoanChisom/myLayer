@@ -10,7 +10,7 @@ export const MainRouter = createBrowserRouter ([
             children:[
                 {
                     index:true,
-                    element:<HomeScreen/>
+                    element:<HomeScreen />
                 }
             ]
         
