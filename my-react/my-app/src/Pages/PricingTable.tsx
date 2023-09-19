@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import GlobalPriceList from "../Props/GlobalPriceList"
 
 const PriceTab = ()=>{
     return(
@@ -17,14 +18,18 @@ const PriceTab = ()=>{
                         <p>We ensure quality & support. People love us & we love them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Heading>
                     <Body>
-                        <Tab>
-                            <Tablet lg="#ff5800, #fe8c00" wd="100px">Basic</Tablet>
-                            <TabWrap>
-                                <p>tfufinjf</p>
-                                <p>fatzysdfj</p>
-                                <p>ardyu</p>
-                            </TabWrap>
-                        </Tab>
+                    <GlobalPriceList borderColor="#ff5000ff" lg="#ff5000ff, #fe8c00ff" text="Basic" number="19"/>
+            <GlobalPriceList borderColor="#0045e5ff" lg="#0045e5ff, #03c4efff" text="Pro" number="29"/>
+            <GlobalPriceList
+              borderColor="#f1384aff"
+              lg="#f1384aff, #a003e6ff"
+              text="Advanced" number="39"
+            />
+            <GlobalPriceList
+              borderColor="#4837f3ff"
+              lg="#4837f3ff, #9406eeff"
+              text="Premium" number = "59"
+            />
                     </Body>
                 </Wrapper>
             </Container>
@@ -32,29 +37,11 @@ const PriceTab = ()=>{
     )
 };
 export default PriceTab;
-const Tablet = styled.button<{lg:string, wd:string}>`
-color:white;
-padding: 15px 2px;
-width:${({wd})=>wd};
+
+
+const Body = styled.div`
 display:flex;
-border:none;
-justify-content:center;
-align-items:center;
-background-image:linear-gradient(to right, ${({lg})=>lg});
-border-radius:100px;
-font-size:18px;
-font-weight:bold;`
-
-const TabWrap = styled.div`
-`
-
-const Tab = styled.div`
-width:20%;
-padding:30px;
-background-color:red;
-border:none;`
-
-const Body = styled.div``
+justify-content:space-between;`
 
 const Rope= styled.div`
 width:95px;

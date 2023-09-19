@@ -41,7 +41,6 @@ const AddedFts = ()=>{
 };
 export default AddedFts;
 const Bottom =styled.div`
-z-index:1;
 // width:80%;
 // background-color:yellow;
 display:flex;

@@ -9,7 +9,9 @@ import DemoVid from "./DemoVideo"
 import Testimonials from './Testimonials'
 import Team from "./Team"
 import AppNews from "./AppNews"
-
+import Twitter from "./Twitter"
+import PriceTab from "./PricingTable";
+ 
 const HomeScreen = ()=>{
     return(
         <div>
@@ -18,13 +20,14 @@ const HomeScreen = ()=>{
             <Features/>
            <HIW/>
            <AddedFts/>
-           {/* <PriceTab/> */}
+           <PriceTab/>
            <Screenshot/>
            <Achievements/>
            <DemoVid/>
            <Testimonials/>
            <Team/>
            <AppNews/>
+           <Twitter/>
         </div>
     )
 };

@@ -12,7 +12,7 @@ const Team =()=>{
                 <Wrapper>
                 <Heading>
                         
-                        <h1>TEAM<span>MEMBERS</span></h1>
+                        <h1>TEAM <span>MEMBERS</span></h1>
                         <Rope>
                             <div/>
                             <hr/>

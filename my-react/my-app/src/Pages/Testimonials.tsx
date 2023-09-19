@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import quote from "../assets/images/quote-cl.png"
 import pic1 from "../assets/images/testimonial1.png"
+import {FaStar} from "react-icons/fa"
+import {IconContext} from "react-icons"
 
 const Testimonials = ()=>{
     return(
@@ -10,7 +12,14 @@ const Testimonials = ()=>{
                     <Left>
                         <img src={quote} width="15%" alt="a quote"/>
                         <h1>The Best Template You Got It!</h1>
-                        <div>hold for stars</div>
+                        <div>
+                            <FaStar/>
+                            <FaStar/>
+                            <FaStar/>
+                            <FaStar/>
+                            <FaStar/>
+                            
+                        </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quas dicta earum quisquam rerum ratione natus? Culpa temporibus ipsam, nisi placeat, dolor necessitatibus, aliquam explicabo quaerat quam cumque commodi maxime omnis.</p>
                         <i> - CEO of CodeLab Set08</i>
                     </Left>
@@ -43,6 +52,10 @@ i{
     font-size:20px;
     color:#e74c3c;
     font-weight:bold;
+};
+div{
+    display:flex;
+    color:orange
 }
 `
 
