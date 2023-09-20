@@ -50,7 +50,7 @@ const PricingComponent: React.FC<iPrice> = ({ text, number, lg, borderColor }) =
             <Icon>
                 <FaCircleCheck />
               </Icon>
-              <p>Integration with Wordpress</p>
+              <p>Integration with press</p>
             </Line>
           </Feature>
           <BtnHolder>
@@ -74,7 +74,7 @@ const Button2 = styled.div`
   border-radius: 30px;
   font-size: 18px;
   color: white;
-  font-weight: 700;
+//   font-weight: 700;
   cursor: pointer;
   margin-top: 20px;
 `;
@@ -117,7 +117,7 @@ const Money = styled.div`
 const Button = styled.button<{ lg:string, borderColor:string }>`
   border: none;
   padding: 14px 34px;
-  background: linear-gradient(
+  background-image: linear-gradient(
     to right,
     ${({ lg }) => lg};
     
@@ -125,7 +125,7 @@ const Button = styled.button<{ lg:string, borderColor:string }>`
   border-radius: 30px;
   font-size: 18px;
   color: white;
-  font-weight: 700;
+//   font-weight: 700;
   box-shadow: 0px 0px 10px 0px ${({ borderColor }) => borderColor};
   margin-bottom: 20px;
   cursor: pointer;
@@ -139,11 +139,14 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   width: 270px;
-  height: 440px;
+  min-height: 440px;
+  height:470px;
   background-color: white;
   border-radius: 10px;
+  margin-right:50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
   box-shadow: 0px 0px 4px silver;
 `;

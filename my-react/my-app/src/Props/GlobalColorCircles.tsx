@@ -32,7 +32,7 @@ position:${({po})=>po};
 bottom:${({bt})=>bt};
 
 &:hover{
-transform: scale(1.3);
+transform: scale(1.2);
 
 };
 `
